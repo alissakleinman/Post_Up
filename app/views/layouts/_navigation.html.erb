@@ -9,8 +9,13 @@
       </button>
       <%= link_to 'Post Up', root_path, class: 'navbar-brand' %>
     </div>
+
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
+         <li class="active"><%= link_to "Create account", new_user_path %><span class="sr-only">(current)</span></a>
+        </li>
+        <li><a href="#">Link</a>
+        </li>
         <% if current_user %>
           <li <p class="navbar-text">Signed in as <%= current_user.email %></p>
           </li>
