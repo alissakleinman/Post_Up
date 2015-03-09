@@ -1,16 +1,12 @@
 <h1>Sign Up</h1>
-<%=form_for User.new do |f| %>
-<%=f.label :full_name %>
-<%=f.text_field :full_name %>
-</br>
-<%=f.label :email %>
-<%=f.text_field :email %>
-</br>
-<%=f.label :password %>
-<%=f.password_field :password %>
-</br>
-<%=f.label :password_confirmation %>
-<%=f.password_field :password_confirmation %>
-</br>
-<%=f.submit "Sign Up" %>
-<%end%>
+<div class="row">
+  <div class="col-md-4">
+    <%= simple_form_for User.new do |f| %>
+      <%=f.input :full_name, label: 'Your name:' %>
+      <%=f.input :email, label: 'Your email:', placeholder: 'user@domain.com' %>
+      <%=f.input :password, label: 'Create a password:' %>
+      <%=f.input :password_confirmation, label: 'Type your password again:' %>
+      <%=f.button :submit, label: "Sign Up" %>
+    <%end%>
+  </div>
+</div>

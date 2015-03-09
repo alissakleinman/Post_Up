@@ -1,8 +1,12 @@
 <h1>Log in</h1>
-<%=form_tag sign_in_path do%>
-<%=label_tag :email %>
-<%=text_field_tag :email %>
-<%=label_tag :password %>
-<%=password_field_tag :password %>
-<%=submit_tag "Sign In" %>
-<%end%>
+<div class="row">
+  <div class="col-md-4">
+    <%= simple_form_for :sign_in, {url: sign_in_path} do |f| %>
+      <%= f.error_notification %>
+
+    <%= f.input :email, placeholder: 'Enter email' %>
+    <%= f.input :password, placeholder: 'Password' %>
+    <%= f.button :submit, "Sign In", class: 'btn-primary' %>
+    <%end%>
+  </div>
+</div>

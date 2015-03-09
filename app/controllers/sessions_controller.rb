@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
+    user = User.find_by_email(params[:sign_in][:email])
+    if user && user.authenticate(params[:sign_in][:password])
       session[:user_id] = user.id
       flash[:notice] = "Successfully signed in!"
       redirect_to root_path

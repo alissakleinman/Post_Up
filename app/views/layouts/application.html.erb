@@ -8,14 +8,14 @@
 </head>
 <body>
 
-  <%= flash[:notice] if flash[:notice] %>
-  <%= flash[:alert] if flash[:alert] %>
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
 
-  <%= render 'shared/navigation' %>
-  
-  <div class="container">
-  <%= yield %>
-</div>
+  <section>
+    <%= render 'layouts/notifications' %>
+    <%= yield %>
+  </section>
 
 </body>
 </html>

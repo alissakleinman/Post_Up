@@ -1,0 +1,22 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding: 70px;
+}
+
+ul.nav.navbar-nav {
+  float: right;
+}
+
+.header-with-button {
+  h1 {
+    float: left;
+  }
+
+  .btn {
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+
+}
