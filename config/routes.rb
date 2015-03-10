@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   delete 'sign_out', to: 'sessions#destroy'
   resources :games
   resources :users
+  resources :messages
 
   root 'home#index'
 

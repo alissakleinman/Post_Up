@@ -1,7 +1,7 @@
 <h1>Upcoming NBA lineup</h1>
 <div class="container">
-  <h3>What's on tap for the NBA this week:</h3>
-  <p class="small">Looking for games from last week? Check the Archive or check your profile for the games you've commented on.</p>
+  <h3>What's on tap for the NBA today:</h3>
+
   <table class="table table-hover">
     <thead>
       <tr>
@@ -10,6 +10,15 @@
         <th>Game Time (date/time)</th>
       </tr>
     </thead>
+    <tbody>
+      <% @games.each do |game| %>
+      <tr>
+        <td><%= game.home_team %></td>
+        <td><%= game.away_team %></td>
+        <td><%= game.game_time %></td>
+      </tr>
+      <%end%>
+    </tbody>
   </table>
 </div>
 
