@@ -10,3 +10,4 @@ Game.create!(home_team: 'Washington Wizards', away_team: 'Memphis Grizzlies', ga
 Game.create!(home_team: 'Utah Jazz', away_team: 'Houston Rockets', game_time: DateTime.parse('March 12 2015 9:00pm'))
 Game.create!(home_team: 'San Antonio Spurs', away_team: 'Cleveland Cavaliers', game_time: DateTime.parse('March 12 2015 9:30pm'))
 Game.create!(home_team: 'Los Angeles Lakers', away_team: 'New York Knicks', game_time: DateTime.parse('March 12 2015 10:30pm'))
+puts "Seed file processing complete"

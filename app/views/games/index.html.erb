@@ -5,6 +5,7 @@
   <table class="table table-hover">
     <thead>
       <tr>
+        <th></th>
         <th>Home Team</th>
         <th>Away Team</th>
         <th>Game Time (date/time)</th>
@@ -13,6 +14,7 @@
     <tbody>
       <% @games.each do |game| %>
       <tr>
+        <td><%= link_to 'Discuss', game_path(game), class: 'btn btn-success' %></td>
         <td><%= game.home_team %></td>
         <td><%= game.away_team %></td>
         <td><%= game.game_time %></td>

@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
   def show
      @game = Game.find(params[:id])
+     @messages = @game.messages
   end
 
 end
