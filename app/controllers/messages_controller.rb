@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @user = current_user.email
     @message = @game.messages.create!(message_params)
     # @message = Message.create!(message_params)
     PrivatePub.publish_to("/messages/#{@game.id}", message: @message )

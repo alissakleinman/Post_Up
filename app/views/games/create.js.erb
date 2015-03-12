@@ -1,4 +1,4 @@
- <%= binding.pry %> 
+
  <% publish_to "/messages/#{@game.id}" do %>
    $("#chat").append("<%= j render(@message) %>");
  <% end %>

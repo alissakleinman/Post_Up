@@ -18,6 +18,7 @@ gem 'autoprefixer-rails'
 gem 'simple_form'
 gem 'private_pub'
 gem 'thin'
+gem 'font-awesome-sass'
 
 
 group :development, :test do
