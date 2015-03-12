@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.0'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -20,10 +19,22 @@ gem 'private_pub'
 gem 'thin'
 gem 'font-awesome-sass'
 
+group :development do
+gem 'sqlite3'
+end
+
+
 
 group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+gem 'byebug'
+gem 'web-console', '~> 2.0'
+gem 'spring'
 end
+
+group :production do
+gem 'rails_12factor'
+gem 'pg'
+end
+
+ruby "2.1.5"
 
